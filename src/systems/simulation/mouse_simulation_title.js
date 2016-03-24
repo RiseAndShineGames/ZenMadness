@@ -1,19 +1,14 @@
 "use strict";
 
-var Gamepad = require("html5-gamepad");
-
-module.exports = function(ecs, data) {
+module.exports = function(ecs, game) {
     ecs.addEach(function(entity, elapsed) {
-		var gamepad = new Gamepad();
-		gamepad.update();
-		console.log(gamepad);
-        var entity_size = data.entities.get(entity, "size");
-        var entity_position = data.entities.get(entity, "position");
-        var image = data.entities.get(entity, "image");
-        var click_image = data.entities.get(entity, "click_image");
-		var mod = data.entities.get(entity, "move_mod");
-		var x = gamepad.axis(1, "left stick x") * mod;
-		var y = gamepad.axis(1, "left stick y") * mod;
+        var entity_size = game.entities.get(entity, "size");
+        var entity_position = game.entities.get(entity, "position");
+        var image = game.entities.get(entity, "image");
+        var click_image = game.entities.get(entity, "click_image");
+		var mod = game.entities.get(entity, "move_mod");
+		var x = game.inputs.axis("left x") * mod;
+		var y = game.inputs.axis("left y") * mod;
         var cursor_position = {
             "x": entity_position.x + x,
             "y": entity_position.y + y
@@ -24,39 +19,39 @@ module.exports = function(ecs, data) {
 		if(cursor_position.y <= 0) {
 			cursor_position.y = 0;
 		}
-		if(cursor_position.x >= data.canvas.width - entity_size.width) {
-			cursor_position.x = data.canvas.width - entity_size.width;
+		if(cursor_position.x >= game.canvas.width - entity_size.width) {
+			cursor_position.x = game.canvas.width - entity_size.width;
 		}
-		if(cursor_position.y >= data.canvas.height - entity_size.height) {
-			cursor_position.y = data.canvas.height - entity_size.height;
+		if(cursor_position.y >= game.canvas.height - entity_size.height) {
+			cursor_position.y = game.canvas.height - entity_size.height;
 		}
-        data.entities.set(entity, "position", cursor_position);
+        game.entities.set(entity, "position", cursor_position);
 
-        var timers = data.entities.get(entity, "timers");
-        var entity_collisions = data.entities.get(entity, "collisions");
-        if(gamepad.button(1, "a")) {
-			data.entities.set(entity, "move_mod", 2);
+        var timers = game.entities.get(entity, "timers");
+        var entity_collisions = game.entities.get(entity, "collisions");
+        if(game.inputs.buttonPressed(1, "action")) {
+			game.entities.set(entity, "move_mod", 2);
             for(var i = 0; i < entity_collisions.length; ++i) {
-                if(data.entities.get(entity_collisions[i], "name") == "play") {
-                    data.entities.set(entity_collisions[i], "image", {"name": "play_pressed"}); 
-                    data.sounds.stop("title");
-                    data.switchScene("tutorial");
+                if(game.entities.get(entity_collisions[i], "name") == "play") {
+                    game.entities.set(entity_collisions[i], "image", {"name": "play_pressed"}); 
+                    game.sounds.stop("title");
+                    game.switchScene("tutorial");
                 }
-                if(data.entities.get(entity_collisions[i], "name") == "zenmode") {
-                    data.entities.set(entity_collisions[i], "image", {"name": "zenmode_pressed"}); 
-                    data.sounds.stop("title");
-                    data.switchScene("main", {"mode": "zen", "level": 1});
+                if(game.entities.get(entity_collisions[i], "name") == "zenmode") {
+                    game.entities.set(entity_collisions[i], "image", {"name": "zenmode_pressed"}); 
+                    game.sounds.stop("meditation_background.wav");
+                    game.switchScene("main", {"mode": "zen", "level": 1});
                 }
-                if(data.entities.get(entity_collisions[i], "name") == "credits") {
-                    data.entities.set(entity_collisions[i], "image", {"name": "credits_pressed"}); 
-                    data.switchScene("credits");
+                if(game.entities.get(entity_collisions[i], "name") == "credits") {
+                    game.entities.set(entity_collisions[i], "image", {"name": "credits_pressed"}); 
+                    game.switchScene("credits");
                 }
             }
             image.name = click_image;
             timers.cursor_click.time = 0;
             timers.cursor_click.running = true;
         } else {
-			data.entities.set(entity, "move_mod", 4);
+			game.entities.set(entity, "move_mod", 4);
 		}
 
     }, "cursor");

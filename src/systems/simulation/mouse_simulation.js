@@ -1,11 +1,7 @@
 "use strict";
 
-var Gamepad = require("html5-gamepad");
-
 module.exports = function(ecs, data) {
     ecs.addEach(function(entity, elapsed) {
-		var gamepad = new Gamepad();
-		gamepad.update();
         var progress_meter = 7;
         var increment_progress =1;
         var progress = data.entities.get(progress_meter,"progress");

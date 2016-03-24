@@ -1,11 +1,7 @@
 "use strict";
 
-var Gamepad = require("html5-gamepad");
-
 module.exports = function(ecs, data) {
     ecs.addEach(function(entity, elapsed) {
-		var gamepad = new Gamepad();
-		gamepad.update();
         var entity_size = data.entities.get(entity, "size");
         var entity_position = data.entities.get(entity, "position");
         var image = data.entities.get(entity, "image");

@@ -22,7 +22,7 @@
 			"y": 0
 		},
 		"image": {
-			"name": "background"
+			"name": "beach1.png"
 		},
 		"zindex": {
 			"zindex": -1
@@ -40,7 +40,7 @@
 			"width": 40,
 			"height": 40
 		},
-		"image": {"name": "cursor"},
+		"image": {"name": "cursor.png"},
 		"click_image": "cursor_clicked",
 		"move_mod": 3,
 		"timers": {
@@ -68,7 +68,7 @@
 			"height": 0
 		},
 		"image": {
-			"name": "title"
+			"name": "title.png"
 		}
 	},
 	{
@@ -84,7 +84,7 @@
 		},
 		"collisions": [],
 		"image": {
-			"name": "play"
+			"name": "play.png"
 		}
 	},
 	{
@@ -100,7 +100,7 @@
 		},
 		"collisions": [],
 		"image": {
-			"name": "zenmode"
+			"name": "zenmode.png"
 		}
 	},
 	{
@@ -116,7 +116,7 @@
 		},
 		"collisions": [],
 		"image": {
-			"name": "credits"
+			"name": "credits.png"
 		}
 	}
 	],
@@ -163,7 +163,7 @@
 			},
 			"matchCanvasSize": true,
 			"image": {
-				"name": "background"
+				"name": "beach1.png"
 			},
 			"zindex": {
 				"zindex": -1
@@ -211,7 +211,7 @@
 				"width": 200,
 				"height": 241
 			},
-			"image": { "name": "player" },
+			"image": { "name": "player_image.png" },
 			"velocity": {
 				"x": 0,
 				"y": 0
@@ -249,7 +249,7 @@
 				"width": 40,
 				"height": 40
 			},
-			"image": {"name": "cursor"},
+			"image": {"name": "cursor.png"},
 			"click_image": "cursor_clicked",
 			"timers": {
 				"cursor_click": {
@@ -286,7 +286,7 @@
 				"height": 131
 			},
 			"image": {
-				"name": "medallion"
+				"name": "medallion.png"
 			},
 			"time":{
 				"scale_time": 0
@@ -310,7 +310,7 @@
 			"name": "zengrenade",
 			"ability_icon": true,
 			"image": {
-				"name": "zengrenade"
+				"name": "zengrenade.png"
 			},
 			"position": {
 				"x": 0,
@@ -345,7 +345,7 @@
 		},
 		{
 			"id": 8,
-			"name": "lotus",
+			"name": "lotus.png",
 			"lotus": true,
 			"size":{
 				"width":220,
@@ -356,7 +356,7 @@
 				"y":0
 			},
 			"image":{
-				"name":"lotus"
+				"name":"lotus.png"
 			}
 		},
 		{
@@ -381,7 +381,7 @@
 		},
 		{
 			"id": 10,
-			"name": "clear_halo",
+			"name": "halo.png",
 			"clear_halo": true,
 			"position": {
 				"x": 0,
@@ -440,7 +440,7 @@
 			},
 			"matchCanvasSize": true,
 			"image": {
-				"name": "background"
+				"name": "beach1.png"
 			},
 			"zindex": {
 				"zindex": -1
@@ -476,7 +476,7 @@
 				"width": 200,
 				"height": 241
 			},
-			"image": { "name": "player" },
+			"image": { "name": "player_image.png" },
 			"velocity": {
 				"x": 0,
 				"y": 0
@@ -514,7 +514,7 @@
 				"width": 40,
 				"height": 40
 			},
-			"image": {"name": "cursor"},
+			"image": {"name": "cursor.png"},
 			"click_image": "cursor_clicked",
 			"timers": {
 				"cursor_click": {
@@ -547,7 +547,7 @@
 				"height": 131
 			},
 			"image": {
-				"name": "medallion"
+				"name": "medallion.png"
 			},
 			"meter_full":false,
 			"max_value": 100,
@@ -567,7 +567,7 @@
 			"name": "play_button",
 			"play_button": true,
 			"image": {
-				"name": "play"
+				"name": "play.png"
 			},
 			"position": {
 				"x": 0,
@@ -584,7 +584,7 @@
 			"name": "zengrenade",
 			"ability_icon": true,
 			"image": {
-				"name": "zengrenade"
+				"name": "zengrenade.png"
 			},
 			"position": {
 				"x": 0,
@@ -632,7 +632,7 @@
 				"y":0
 			},
 			"image":{
-				"name":"lotus"
+				"name":"lotus.png"
 			}
 		},
 		{
@@ -650,7 +650,7 @@
 		},
 		{
 			"id": 10,
-			"name": "clear_halo",
+			"name": "halo.png",
 			"clear_halo": true,
 			"position": {
 				"x": 0,
@@ -683,13 +683,10 @@
 			},
 			"matchCanvasSize": true,
 			"image": {
-				"name": "background"
+				"name": "beach1.png"
 			},
 			"zindex": {
 				"zindex": -1
-			},
-			"image": {
-				"name": "background"
 			},
 			"timers":{
 				"bring_in_film":{
@@ -719,7 +716,7 @@
 				"width": 40,
 				"height": 40
 			},
-			"image": {"name": "cursor"},
+			"image": {"name": "cursor.png"},
 			"click_image": "cursor_clicked",
 			"timers": {
 				"cursor_click": {
@@ -754,7 +751,7 @@
 				"zindex": -1
 			},
 			"image": {
-				"name": "background"
+				"name": "beach1.png"
 			},
 			"timers":{
 			}
@@ -774,7 +771,7 @@
 			},
 			"click_image": "cursor_clicked",
 			"image": {
-				"name": "cursor"
+				"name": "cursor.png"
 			},
 			"timers": {
 				"cursor_click": {
@@ -801,7 +798,7 @@
 				"height": 0
 			},
 			"image": {
-				"name": "credits_scene"
+				"name": "creditsscene.png"
 			}
 		},
 		{
@@ -817,7 +814,7 @@
 			},
 			"collisions": [],
 			"image": {
-				"name": "back_to_title"
+				"name": "backtotitle.png"
 			},
 			"zindex": {
 				"zindex": 4
@@ -835,7 +832,7 @@
 				"height": 0
 			},
 			"image": {
-				"name": "dev"
+				"name": "development.png"
 			}
 		},
 		{
@@ -853,7 +850,7 @@
 				"height": 0
 			},
 			"image": {
-				"name": "anthony"
+				"name": "anthony.png"
 			}
 		},
 		{
@@ -870,7 +867,7 @@
 				"height": 0
 			},
 			"image": {
-				"name": "matthew"
+				"name": "matthew.png"
 			}
 		},
 		{
@@ -885,7 +882,7 @@
 				"height": 0
 			},
 			"image": {
-				"name": "artwork"
+				"name": "artwork.png"
 			}
 		},
 		{
@@ -902,7 +899,7 @@
 				"height": 0
 			},
 			"image": {
-				"name": "ryan"
+				"name": "ryan.png"
 			}
 		},
 		{
@@ -917,7 +914,7 @@
 				"height": 0
 			},
 			"image": {
-				"name": "music"
+				"name": "music.png"
 			}
 		},
 		{
@@ -933,7 +930,7 @@
 				"height": 0
 			},
 			"image": {
-				"name": "zoe"
+				"name": "zoe.png"
 			}
 		}
 	]

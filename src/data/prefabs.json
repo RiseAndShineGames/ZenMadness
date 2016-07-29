@@ -16,7 +16,7 @@
         },
         "collisions": [],
         "image": {
-            "name": "negative_projectile"
+            "name": "badswirl2.png"
         },
         "negative_effect": true,
         "effect": 1,
@@ -107,7 +107,7 @@
         "cloud": true,
         "dark": false,
         "image": {
-            "name": "clouds1"
+            "name": "clouds1.png"
         },
         "velocity": {
             "x": 0,
@@ -132,7 +132,7 @@
         },
         "collisions": [],
         "image":{
-            "name": "back_to_title"
+            "name": "backtotitle.png"
         }
     },
     "end_btn_try_again":{
@@ -149,7 +149,7 @@
         },
         "collisions": [],
         "image":{
-            "name": "try_again"
+            "name": "tryagain.png"
         }
     }
 }

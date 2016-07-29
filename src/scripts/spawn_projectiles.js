@@ -54,9 +54,9 @@ module.exports = function(entity, data) {
     }
     data.entities.set(projectile, "negative_effect", negative > 2);
     if(negative > 2){
-        data.entities.set(projectile, "image", {"name": "negative_projectile"});
+        data.entities.set(projectile, "image", {"name": "badswirl2.png"});
     } else {
-        data.entities.set(projectile, "image", {"name": "positive_projectile"});
+        data.entities.set(projectile, "image", {"name": "goodswirl.png"});
     }
     if(big) {
         data.entities.set(projectile, "size", {"width": data.canvas.width * 0.04, "height": data.canvas.width * 0.04});

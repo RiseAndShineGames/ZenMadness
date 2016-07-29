@@ -1,20 +1,30 @@
 {
-    "zengrenade": {
-        "type": "button",
-        "inputs": [
-		{
-            "device": "keyboard",
-            "key": "space"
-        },
-		{
-			"device": "gamepad",
-			"button": "a"
-		}
-		]
+	"axes": {
+        "x": [
+            {
+                "device": "gamepad",
+                "axis": "left stick x"
+            }
+        ],
+        "y": [
+            {
+                "device": "gamepad",
+                "axis": "left stick y"
+            }
+        ]
     },
-    "pause": {
-        "type": "button",
-        "inputs": [
+    "buttons": {
+        "zengrenade": [
+            {
+                "device": "keyboard",
+                "key": "space"
+            },
+            {
+                "device": "gamepad",
+                "button": "b"
+            }
+        ],
+        "pause": [
             {
                 "device": "keyboard",
                 "key": "p"
@@ -23,24 +33,22 @@
                 "device": "keyboard",
                 "key": "escape"
             }
+        ],
+        "mute": [
+            {
+                "device": "keyboard",
+                "key": "m"
+            }
+        ],
+        "action": [
+            {
+                "device": "mouse",
+                "button": 0
+            },
+            {
+                "device": "gamepad",
+                "button": "a"
+            }
         ]
-    },
-	"mute": {
-		"type": "button",
-		"inputs": [
-			{
-				"device": "keyboard",
-				"key": "m"
-			}
-		]
-	},
-	"action": {
-		"type": "button",
-		"inputs": [
-			{
-				"device": "mouse",
-				"button": 0
-			}
-		]
-	}
+    }
 }

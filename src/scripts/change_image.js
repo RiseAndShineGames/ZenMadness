@@ -1,5 +1,5 @@
 "use strict";
 
 module.exports = function(entity, data) {
-    data.entities.set(entity, "image", {"name": "cursor"});
+    data.entities.set(entity, "image", {"name": "cursor.png"});
 }

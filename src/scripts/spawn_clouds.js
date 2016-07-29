@@ -6,7 +6,8 @@ module.exports = function(entity, data) {
     var image = data.entities.get(cloud, "image");
     var pos = {
         "x": Math.floor(Math.random() * ((data.canvas.width - 200) - 1)) + 1,
-        "y": Math.floor(Math.random() * (205 - 15)) + 15
+        "y": Math.floor(Math.random() * (205 - 15)) + 15,
+        "z": 1
     };
     data.entities.set(cloud, "position", pos);
 
@@ -15,7 +16,7 @@ module.exports = function(entity, data) {
 
     if( black_cloud > 3 ) {
         cloud_num = Math.floor(Math.random() * (3 - 1)) + 1;
-        cloud_name = "dark_clouds" + cloud_num.toString();
+        cloud_name = "dark_clouds" + cloud_num.toString() + ".png";
         switch(cloud_num) {
             case 3:
                 data.entities.set(cloud, "size", {"width": 200, "height": 95});
@@ -33,7 +34,7 @@ module.exports = function(entity, data) {
         data.entities.set(cloud, "z-index", {"z-index": 0});
     } else {
         cloud_num = Math.floor(Math.random() * (5 - 1)) + 1;
-        cloud_name = "clouds" + cloud_num.toString();
+        cloud_name = "clouds" + cloud_num.toString() + ".png";
         switch(cloud_num) {
             case 5:
                 data.entities.set(cloud, "size", {"width": 200, "height": 79});
@@ -54,7 +55,6 @@ module.exports = function(entity, data) {
                 data.entities.set(cloud, "size", {"width": 0, "height": 0});
                 break;
         }
-        data.entities.set(cloud, "z-index", {"z-index": 1});
     }
 
     image.name = cloud_name;

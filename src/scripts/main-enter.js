@@ -8,13 +8,13 @@ module.exports = function(data) { // eslint-disable-line no-unused-vars
 
 	var levels = [
 		{
-			"background": "background3",
+			"background": "background3.png",
 		},
 		{
-			"background": "background",
+			"background": "beach1.png",
 		},
 		{
-			"background": "background2",
+			"background": "background2.png",
 		}
 	]
 	

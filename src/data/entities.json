@@ -6,7 +6,8 @@
 		"camera": true,
 		"position": {
 			"x": 0,
-			"y": 0
+			"y": 0,
+            "z": -1
 		},
 		"timers": {
 			"set_constants": {
@@ -22,10 +23,7 @@
 			"y": 0
 		},
 		"image": {
-			"name": "background"
-		},
-		"zindex": {
-			"zindex": -1
+			"name": "beach1.png"
 		}
 	},
 	{
@@ -34,14 +32,15 @@
 		"cursor": true,
 		"position": {
 			"x": 0,
-			"y": 0
+			"y": 0,
+            "z": 6
 		},
 		"size": {
 			"width": 40,
 			"height": 40
 		},
-		"image": {"name": "cursor"},
-		"click_image": "cursor_clicked",
+		"image": {"name": "cursor.png"},
+		"click_image": "cursorclicked.png",
 		"move_mod": 3,
 		"timers": {
 			"cursor_click": {
@@ -51,10 +50,7 @@
 				"script": "./scripts/change_image"
 			}
 		},
-		"collisions": [],
-		"zindex": {
-			"zindex": 6
-		}
+		"collisions": []
 	},
 	{
 		"id": 3,
@@ -68,7 +64,7 @@
 			"height": 0
 		},
 		"image": {
-			"name": "title"
+			"name": "title.png"
 		}
 	},
 	{
@@ -84,7 +80,7 @@
 		},
 		"collisions": [],
 		"image": {
-			"name": "play"
+			"name": "play.png"
 		}
 	},
 	{
@@ -100,7 +96,7 @@
 		},
 		"collisions": [],
 		"image": {
-			"name": "zenmode"
+			"name": "zenmodeselect.png"
 		}
 	},
 	{
@@ -116,7 +112,7 @@
 		},
 		"collisions": [],
 		"image": {
-			"name": "credits"
+			"name": "credits.png"
 		}
 	}
 	],
@@ -159,14 +155,12 @@
 			},
 			"position": {
 				"x": 0,
-				"y": 0
+				"y": 0,
+                "z": -1
 			},
 			"matchCanvasSize": true,
 			"image": {
-				"name": "background"
-			},
-			"zindex": {
-				"zindex": -1
+				"name": "beach1.png"
 			}
 		},
 		{
@@ -198,20 +192,21 @@
 				"jitter_time": 0
 			},
 			"is_hit": false,
-			"ouch_image": "player_ouch",
-			"zen_image": "player",
+			"ouch_image": "monkmad.png",
+			"zen_image": "player_image.png",
 			"rotation": {
 				"angle": 0
 			},
 			"position": {
 				"x": 0,
-				"y": 0
+				"y": 0,
+                "z": 5
 			},
 			"size": {
 				"width": 200,
 				"height": 241
 			},
-			"image": { "name": "player" },
+			"image": { "name": "player_image.png" },
 			"velocity": {
 				"x": 0,
 				"y": 0
@@ -230,9 +225,6 @@
 					"cooldown": 9,
 					"prefab": "laser_ability"
 				}
-			},
-			"zindex": {
-				"zindex": 5
 			}
 		},
 		{
@@ -243,14 +235,15 @@
 			"was_pressed": false,
 			"position": {
 				"x": 0,
-				"y": 0
+				"y": 0,
+                "z": 6
 			},
 			"size": {
 				"width": 40,
 				"height": 40
 			},
-			"image": {"name": "cursor"},
-			"click_image": "cursor_clicked",
+			"image": {"name": "cursor.png"},
+			"click_image": "cursorclicked.png",
 			"timers": {
 				"cursor_click": {
 					"running": false,
@@ -264,10 +257,7 @@
 					"max": 20000
 				}
 			},
-			"collisions": [],
-			"zindex": {
-				"zindex": 6
-			}
+			"collisions": []
 		},
 		{
 			"id": 3,
@@ -275,7 +265,8 @@
 			"om": true,
 			"position": {
 				"x": 0,
-				"y": 0
+				"y": 0,
+                "z": 1
 			},
 			"size": {
 				"width": 125,
@@ -286,7 +277,7 @@
 				"height": 131
 			},
 			"image": {
-				"name": "medallion"
+				"name": "medallion.png"
 			},
 			"time":{
 				"scale_time": 0
@@ -295,9 +286,6 @@
 			"max_value": 50,
 			"value":0,
 			"collisions": [],
-			"zindex": {
-				"zindex": 1
-			},
 			"om_progress":{
 				"value": 0,
 				"max": 50,
@@ -310,7 +298,7 @@
 			"name": "zengrenade",
 			"ability_icon": true,
 			"image": {
-				"name": "zengrenade"
+				"name": "zengrenade.png"
 			},
 			"position": {
 				"x": 0,
@@ -356,7 +344,7 @@
 				"y":0
 			},
 			"image":{
-				"name":"lotus"
+				"name":"lotus.png"
 			}
 		},
 		{
@@ -436,14 +424,12 @@
 			},
 			"position": {
 				"x": 0,
-				"y": 0
+				"y": 0,
+                "z": -1
 			},
 			"matchCanvasSize": true,
 			"image": {
-				"name": "background"
-			},
-			"zindex": {
-				"zindex": -1
+				"name": "beach1.png"
 			}
 		},
 		{
@@ -463,20 +449,21 @@
 				"jitter_time": 0
 			},
 			"is_hit": false,
-			"ouch_image": "player_ouch",
-			"zen_image": "player",
+			"ouch_image": "monkmad.png",
+			"zen_image": "player_image.png",
 			"rotation": {
 				"angle": 0
 			},
 			"position": {
 				"x": 0,
-				"y": 0
+				"y": 0,
+                "z": 5
 			},
 			"size": {
 				"width": 200,
 				"height": 241
 			},
-			"image": { "name": "player" },
+			"image": { "name": "player_image.png" },
 			"velocity": {
 				"x": 0,
 				"y": 0
@@ -495,9 +482,6 @@
 					"cooldown": 9,
 					"prefab": "laser_ability"
 				}
-			},
-			"zindex": {
-				"zindex": 5
 			}
 		},
 		{
@@ -508,14 +492,15 @@
 			"cursor": true,
 			"position": {
 				"x": 0,
-				"y": 0
+				"y": 0,
+                "z": 6
 			},
 			"size": {
 				"width": 40,
 				"height": 40
 			},
-			"image": {"name": "cursor"},
-			"click_image": "cursor_clicked",
+			"image": {"name": "cursor.png"},
+			"click_image": "cursorclicked.png",
 			"timers": {
 				"cursor_click": {
 					"running": false,
@@ -529,10 +514,7 @@
 					"max": 10000
 				}
 			},
-			"collisions": [],
-			"zindex": {
-				"zindex": 6
-			}
+			"collisions": []
 		},
 		{
 			"id": 3,
@@ -540,21 +522,19 @@
 			"om": true,
 			"position": {
 				"x": 0,
-				"y": 0
+				"y": 0,
+                "z": 1
 			},
 			"size": {
 				"width": 125,
 				"height": 131
 			},
 			"image": {
-				"name": "medallion"
+				"name": "medallion.png"
 			},
 			"meter_full":false,
 			"max_value": 100,
 			"value":0,
-			"zindex": {
-				"zindex": 1
-			},
 			"om_progress":{
 				"value": 0,
 				"max": 100,
@@ -567,7 +547,7 @@
 			"name": "play_button",
 			"play_button": true,
 			"image": {
-				"name": "play"
+				"name": "play.png"
 			},
 			"position": {
 				"x": 0,
@@ -584,7 +564,7 @@
 			"name": "zengrenade",
 			"ability_icon": true,
 			"image": {
-				"name": "zengrenade"
+				"name": "zengrenade.png"
 			},
 			"position": {
 				"x": 0,
@@ -632,7 +612,7 @@
 				"y":0
 			},
 			"image":{
-				"name":"lotus"
+				"name":"lotus.png"
 			}
 		},
 		{
@@ -679,17 +659,12 @@
 			"camera": true,
 			"position": {
 				"x": 0,
-				"y": 0
+				"y": 0,
+                "z": -1
 			},
 			"matchCanvasSize": true,
 			"image": {
-				"name": "background"
-			},
-			"zindex": {
-				"zindex": -1
-			},
-			"image": {
-				"name": "background"
+				"name": "beach1.png"
 			},
 			"timers":{
 				"bring_in_film":{
@@ -713,14 +688,15 @@
 			"move_mod": 3,
 			"position": {
 				"x": 0,
-				"y": 0
+				"y": 0,
+                "z": 6
 			},
 			"size": {
 				"width": 40,
 				"height": 40
 			},
-			"image": {"name": "cursor"},
-			"click_image": "cursor_clicked",
+			"image": {"name": "cursor.png"},
+			"click_image": "cursorclicked.png",
 			"timers": {
 				"cursor_click": {
 					"running": false,
@@ -734,10 +710,7 @@
 					"max": 10000
 				}
 			},
-			"collisions": [],
-			"zindex": {
-				"zindex": 6
-			}
+			"collisions": []
 		}
 	],
 		"credits": [
@@ -747,14 +720,12 @@
 			"camera": true,
 			"position": {
 				"x": 0,
-				"y": 0
+				"y": 0,
+                "z": -1
 			},
 			"matchCanvasSize": true,
-			"zindex": {
-				"zindex": -1
-			},
 			"image": {
-				"name": "background"
+				"name": "beach1.png"
 			},
 			"timers":{
 			}
@@ -766,15 +737,16 @@
 			"move_mod": 3,
 			"position": {
 				"x": 0,
-				"y": 0
+				"y": 0,
+                "z": 6
 			},
 			"size": {
 				"width": 40,
 				"height": 40
 			},
-			"click_image": "cursor_clicked",
+			"click_image": "cursorclicked.png",
 			"image": {
-				"name": "cursor"
+				"name": "cursor.png"
 			},
 			"timers": {
 				"cursor_click": {
@@ -784,10 +756,7 @@
 					"script": "./scripts/change_image"
 				}
 			},
-			"collisions": [],
-			"zindex": {
-				"zindex": 6
-			}
+			"collisions": []
 		},
 		{
 			"id": 3,
@@ -801,7 +770,7 @@
 				"height": 0
 			},
 			"image": {
-				"name": "credits_scene"
+				"name": "creditsscene.png"
 			}
 		},
 		{
@@ -809,7 +778,8 @@
 			"name": "back_title",
 			"position": {
 				"x": 0,
-				"y": 0
+				"y": 0,
+                "z": 4
 			},
 			"size": {
 				"width": 426,
@@ -817,10 +787,7 @@
 			},
 			"collisions": [],
 			"image": {
-				"name": "back_to_title"
-			},
-			"zindex": {
-				"zindex": 4
+				"name": "backtotitle.png"
 			}
 		},
 		{
@@ -835,7 +802,7 @@
 				"height": 0
 			},
 			"image": {
-				"name": "dev"
+				"name": "development.png"
 			}
 		},
 		{
@@ -853,7 +820,7 @@
 				"height": 0
 			},
 			"image": {
-				"name": "anthony"
+				"name": "anthony.png"
 			}
 		},
 		{
@@ -870,7 +837,7 @@
 				"height": 0
 			},
 			"image": {
-				"name": "matthew"
+				"name": "matt.png"
 			}
 		},
 		{
@@ -885,7 +852,7 @@
 				"height": 0
 			},
 			"image": {
-				"name": "artwork"
+				"name": "artwork.png"
 			}
 		},
 		{
@@ -902,7 +869,7 @@
 				"height": 0
 			},
 			"image": {
-				"name": "ryan"
+				"name": "ryan.png"
 			}
 		},
 		{
@@ -917,7 +884,7 @@
 				"height": 0
 			},
 			"image": {
-				"name": "music"
+				"name": "music.png"
 			}
 		},
 		{
@@ -933,7 +900,7 @@
 				"height": 0
 			},
 			"image": {
-				"name": "zoe"
+				"name": "zoe.png"
 			}
 		}
 	]

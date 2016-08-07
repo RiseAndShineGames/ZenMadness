@@ -30,21 +30,20 @@ module.exports = function(ecs, game) {
         var timers = game.entities.get(entity, "timers");
         var entity_collisions = game.entities.get(entity, "collisions");
         if(game.inputs.button("action")) {
-            console.log("testing");
 			game.entities.set(entity, "move_mod", 2);
             for(var i = 0; i < entity_collisions.length; ++i) {
                 if(game.entities.get(entity_collisions[i], "name") == "play") {
-                    game.entities.set(entity_collisions[i], "image", {"name": "play_pressed"}); 
+                    game.entities.set(entity_collisions[i], "image", {"name": "playpressed.png"}); 
                     game.sounds.stop("title");
                     game.switchScene("tutorial");
                 }
                 if(game.entities.get(entity_collisions[i], "name") == "zenmode") {
-                    game.entities.set(entity_collisions[i], "image", {"name": "zenmode_pressed"}); 
+                    game.entities.set(entity_collisions[i], "image", {"name": "zenmodeselectpressed.png"}); 
                     game.sounds.stop("title");
                     game.switchScene("main", {"mode": "zen", "level": 1});
                 }
                 if(game.entities.get(entity_collisions[i], "name") == "credits") {
-                    game.entities.set(entity_collisions[i], "image", {"name": "credits_pressed"}); 
+                    game.entities.set(entity_collisions[i], "image", {"name": "creditspressed.png"}); 
                     game.switchScene("credits");
                 }
             }

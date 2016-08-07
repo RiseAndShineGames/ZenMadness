@@ -1,22 +1,22 @@
 "use strict";
 
-module.exports = function(ecs, data) { // eslint-disable-line no-unused-vars
-	data.entities.registerSearch("search", ["btn"]);
-	data.entities.registerSearch("cursor", ["cursor"]);
-	ecs.addEach(function(entity, context) { // eslint-disable-line no-unused-vars
-		var position = data.entities.get(entity, "position");
-		var size = data.entities.get(entity, "size");
-		context.globalAlpha = 1;
-		var image = data.entities.get(entity,"image");
-		context.drawImage(data.images.get(image.name),position.x,position.y,size.width,size.height);
+module.exports = function(ecs, game) { // eslint-disable-line no-unused-vars
+	game.entities.registerSearch("search", ["btn"]);
+	game.entities.registerSearch("cursor", ["cursor"]);
+	ecs.addEach(function(entity, elapsed) { // eslint-disable-line no-unused-vars
+		var position = game.entities.get(entity, "position");
+		var size = game.entities.get(entity, "size");
+		game.context.globalAlpha = 1;
+		var image = game.entities.get(entity,"image");
+		game.context.drawImage(game.images.get(image.name),position.x,position.y,size.width,size.height);
 
 	}, "search");
-	ecs.addEach(function(entity, context) { // eslint-disable-line no-unused-vars
-		var position = data.entities.get(entity, "position");
-		var size = data.entities.get(entity, "size");
-		context.globalAlpha = 1;
-		var image = data.entities.get(entity,"image");
-		context.drawImage(data.images.get(image.name),position.x,position.y,size.width,size.height);
+	ecs.addEach(function(entity, elapsed) { // eslint-disable-line no-unused-vars
+		var position = game.entities.get(entity, "position");
+		var size = game.entities.get(entity, "size");
+		game.context.globalAlpha = 1;
+		var image = game.entities.get(entity,"image");
+		game.context.drawImage(game.images.get(image.name),position.x,position.y,size.width,size.height);
 
 	}, "cursor");
 };

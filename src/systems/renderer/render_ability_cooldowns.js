@@ -1,21 +1,21 @@
 "use strict";
 
-module.exports = function(ecs, data) {
-	ecs.addEach(function(entity, context) { // eslint-disable-line no-unused-vars
+module.exports = function(ecs, game) {
+	ecs.addEach(function(entity, elapsed) { // eslint-disable-line no-unused-vars
 
         var cursor = 2;
-        var name = data.entities.get(entity, "name");
-        var timers = data.entities.get(cursor, "timers");
-        var position = data.entities.get(entity, "position");
-        var size = data.entities.get(entity, "size");
+        var name = game.entities.get(entity, "name");
+        var timers = game.entities.get(cursor, "timers");
+        var position = game.entities.get(entity, "position");
+        var size = game.entities.get(entity, "size");
         
         if(name == "zengrenade") {
             if(timers.zen_cooldown.running) {
                 var zen_percent = timers.zen_cooldown.time / timers.zen_cooldown.max;
-                context.globalAlpha = 0.25;
-                context.fillStyle = "black";
-                context.fillRect(position.x + size.width * 0.15, position.y + size.height * 0.15, (size.width * 0.7) - ((size.width * 0.7) * zen_percent), size.height * 0.7);
-                context.globalAlpha = 1;
+                game.context.globalAlpha = 0.25;
+                game.context.fillStyle = "black";
+                game.context.fillRect(position.x + size.width * 0.15, position.y + size.height * 0.15, (size.width * 0.7) - ((size.width * 0.7) * zen_percent), size.height * 0.7);
+                game.context.globalAlpha = 1;
             }
         }
 

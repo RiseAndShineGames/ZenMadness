@@ -1,15 +1,15 @@
 "use strict";
 
-module.exports = function(ecs, data) {
+module.exports = function(ecs, game) {
     ecs.addEach(function(entity, elapsed) {
-        var entity_size = data.entities.get(entity, "size");
-        var entity_position = data.entities.get(entity, "position");
-        var image = data.entities.get(entity, "image");
-        var click_image = data.entities.get(entity, "click_image");
+        var entity_size = game.entities.get(entity, "size");
+        var entity_position = game.entities.get(entity, "position");
+        var image = game.entities.get(entity, "image");
+        var click_image = game.entities.get(entity, "click_image");
         
-		var mod = data.entities.get(entity, "move_mod");
-		var x = gamepad.axis(0, "left stick x") * mod;
-		var y = gamepad.axis(0, "left stick y") * mod;
+		var mod = game.entities.get(entity, "move_mod");
+		var x = game.inputs.axis("x") * mod;
+		var y = game.inputs.axis("y") * mod;
         var cursor_position = {
             "x": entity_position.x + x,
             "y": entity_position.y + y
@@ -20,25 +20,25 @@ module.exports = function(ecs, data) {
 		if(cursor_position.y <= 0) {
 			cursor_position.y = 0;
 		}
-		if(cursor_position.x >= data.canvas.width - entity_size.width) {
-			cursor_position.x = data.canvas.width - entity_size.width;
+		if(cursor_position.x >= game.canvas.width - entity_size.width) {
+			cursor_position.x = game.canvas.width - entity_size.width;
 		}
-		if(cursor_position.y >= data.canvas.height - entity_size.height) {
-			cursor_position.y = data.canvas.height - entity_size.height;
+		if(cursor_position.y >= game.canvas.height - entity_size.height) {
+			cursor_position.y = game.canvas.height - entity_size.height;
 		}
-        data.entities.set(entity, "position", cursor_position);
+        game.entities.set(entity, "position", cursor_position);
 
-        var timers = data.entities.get(entity, "timers");
-        var entity_collisions = data.entities.get(entity, "collisions");
-        if(data.input.mouse.consumePressed(0)) {
+        var timers = game.entities.get(entity, "timers");
+        var entity_collisions = game.entities.get(entity, "collisions");
+        if(game.inputs.button("action")) {
             for(var i = 0; i < entity_collisions.length; ++i) {
-                if(data.entities.get(entity_collisions[i], "name") == "back_title") {
-                    data.entities.set(entity_collisions[i], "image", {"name": "back_to_title_pressed"}); 
-                    data.sounds.stop("title");
-                    data.switchScene("title");
+                if(game.entities.get(entity_collisions[i], "name") == "back_title") {
+                    game.entities.set(entity_collisions[i], "image", {"name": "backtotitlepressed.png"}); 
+                    game.sounds.stop("title");
+                    game.switchScene("title");
                 }
-				if(data.entities.get(entity_collisions[i], "target_url").length > 0) {
-					window.location = data.entities.get(entity_collisions[i], "target_url");
+				if(game.entities.get(entity_collisions[i], "target_url").length > 0) {
+					window.location = game.entities.get(entity_collisions[i], "target_url");
 				}
             }
             image.name = click_image;

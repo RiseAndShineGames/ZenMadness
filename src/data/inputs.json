@@ -21,7 +21,7 @@
             },
             {
                 "device": "gamepad",
-                "button": "b"
+                "button": "right trigger"
             }
         ],
         "pause": [
@@ -32,6 +32,16 @@
             {
                 "device": "keyboard",
                 "key": "escape"
+            }
+        ],
+        "start": [
+            {
+                "device": "gamepad",
+                "button": "start"
+            },
+            {
+                "device": "keyboard",
+                "key": "enter"
             }
         ],
         "mute": [

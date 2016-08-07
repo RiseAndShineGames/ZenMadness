@@ -2,8 +2,8 @@
 
 module.exports = function(entity, data) {
     
-    data.sounds.play("background", true);
-    data.sounds.play("beach", true);
+    data.sounds.play("meditation_background.mp3", true);
+    data.sounds.play("beach.mp3", true);
     var player = 1;
     var om = 3;
 	var halo = 9;

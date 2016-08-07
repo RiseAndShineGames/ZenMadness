@@ -1,13 +1,13 @@
 "use strict";
 
-module.exports = function(entity, data) {
+module.exports = function(entity, game) {
 
 	var camera = 0;
-	var constants = data.entities.get(camera, "constants");
-	var player_pos = data.entities.get(entity, "position");
-	var player_size = data.entities.get(entity, "size");
-	var cam_timers = data.entities.get(camera, "timers");
-    var timers = data.entities.get(entity, "timers");
+	var constants = game.entities.get(camera, "constants");
+	var player_pos = game.entities.get(entity, "position");
+	var player_size = game.entities.get(entity, "size");
+	var cam_timers = game.entities.get(camera, "timers");
+    var timers = game.entities.get(entity, "timers");
 
 	if( player_pos.y < constants.center.y - player_size.height / 2 ) {
 		player_pos.y += 5;

@@ -1,10 +1,10 @@
 "use strict";
 
-module.exports = function(data) { // eslint-disable-line no-unused-vars
+module.exports = function(game) { // eslint-disable-line no-unused-vars
 
 	var camera = 0;
-	var camera_timers = data.entities.get(camera, "timers");
-	var level = parseInt(data.arguments.level) % 3;
+	var camera_timers = game.entities.get(camera, "timers");
+	var level = parseInt(game.arguments.level) % 3;
 
 	var levels = [
 		{
@@ -22,6 +22,6 @@ module.exports = function(data) { // eslint-disable-line no-unused-vars
 		camera_timers.spawn_clouds.running = true;
 	}
 
-	data.entities.set(camera, "image", { "name": levels[level]["background"] });
+	game.entities.set(camera, "image", { "name": levels[level]["background"] });
 	
 };

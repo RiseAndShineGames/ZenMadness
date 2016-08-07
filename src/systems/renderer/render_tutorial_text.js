@@ -5,7 +5,7 @@ module.exports = function(ecs, game) {
 
         var pos_txt = "This is Positive Energy. It will bring your monk to zen";
         var neg_txt = "This is Negative Energy. It will ruin your monk's concentration.";
-        var zengrenade_txt = "Press space to drop a zen grenade.";
+        var zengrenade_txt = "Pull right trigger to drop a zen grenade.";
 
         // Positive Projectile Position: {"x": game.canvas.width * 0.25, "y": game.canvas.height * 0.1}
         game.context.font = "20px Arial";
